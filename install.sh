@@ -1,7 +1,7 @@
-version="0.2.0"
+version="0.2.1"
 
-echo "Downloading https://github.com/archan937/jsonv.sh/archive/$version.tar.gz"
-curl -L -s https://github.com/archan937/jsonv.sh/archive/$version.tar.gz -o jsonv.sh-$version.tar.gz
+echo "Downloading https://github.com/qwweee/jsonv.sh/archive/$version.tar.gz"
+curl -L -s https://github.com/qwweee/jsonv.sh/archive/$version.tar.gz -o jsonv.sh-$version.tar.gz
 
 echo "Unpacking jsonv.sh-$version.tar.gz"
 tar xzf jsonv.sh-$version.tar.gz

@@ -4,7 +4,7 @@
 # A Bash command line tool for converting JSON to CSV
 #
 # Copyright (c) 2013 Paul Engel, released under the MIT license
-# https://github.com/archan937/jsonv.sh
+# https://github.com/qwweee/jsonv.sh
 #
 # Get a JSON file
 #
@@ -96,7 +96,7 @@ jsonv () {
   fi
 
   echo_log "Counting entries"
-  count=$(cat $tokens | sed 's/^[\["a-z,]*//g' | sed 's/,.*//g' | gawk '/^[0-9]+$/ && !_[$0]++' | gawk -F\t 'BEGIN{max==""} ($1 > max) {max=$1} END{print max}')
+  count="$(cat $tokens | sed 's/^[\["a-zA-Z,]*//g' | sed 's/,.*//g' | gawk '/^[0-9]+$/ && !_[$0]++' | gawk -F\t 'BEGIN{max==""} ($1 > max) {max=$1} END{print max}')"
 
   echo_log "Writing map file"
   row=''
